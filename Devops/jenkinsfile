@@ -8,7 +8,8 @@ pipeline {
                 git url: 'https://github.com/AnnamSaiShivani/Devops.git', branch: 'main'
 
                 // Copy code to web server path
-                sh 'sudo cp -r ./*/var/www/html/'
+                sudo -S cp -r ./*/var/www/html/ <<< "$SUDO_PASSWORD"
+                //sh 'sudo cp -r ./*/var/www/html/'
             }
         }
 
