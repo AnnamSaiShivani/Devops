@@ -8,10 +8,8 @@ pipeline {
                 git url: 'https://github.com/AnnamSaiShivani/Devops.git', branch: 'main'
 
                 // Copy code to web server path
-                withEnv(['SUDO_PASSWORD=Ammulu@123']) {
-                sh 'sudo -S -p "" cp -r ./*/var/www/html/ /var/www/'
-                }
-                //sh 'sudo cp -r ./*/var/www/html/'
+            
+                sh 'sudo cp -r ./*/var/www/html/'
             }
         }
 
@@ -19,7 +17,7 @@ pipeline {
             steps {
                 // Retrieve the URL of your application
                 // Replace this with the command to get the URL of your application
-                 echo "http://13.201.72.251:8080/Devops/index.html" 
+                 echo "http://13.201.72.251/Devops/index.html" 
             }
         }
     }
