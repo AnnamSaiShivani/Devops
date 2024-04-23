@@ -10,7 +10,7 @@ pipeline {
                 // Copy code to web server path
             
                sh 'sudo cp -r ./* /var/www/html/'
-'
+
             }
         }
 
