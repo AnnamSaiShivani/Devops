@@ -9,7 +9,7 @@ pipeline {
 
                 // Copy code to web server path
             
-                sh 'sudo cp -r /var/www/html/devops /var/www/'
+                sh 'sudo cp -r /var/www/html/devops/index.html /var/www/'
             }
         }
 
